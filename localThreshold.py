@@ -14,8 +14,8 @@ def localThres(image,block_size,c):
             threshold[i,j] = 255 if image[i][j] > (local_mean - c) else 0
     return threshold
 
-image1 = img.imread("C:\\Users\\KOMPUTER 20\\Downloads\\jezo\\PCD\\PCD11\\zeejkt.jpeg",mode='F')
-image2 = img.imread("C:\\Users\\KOMPUTER 20\\Downloads\\jezo\\PCD\\PCD11\\zeejkt.jpeg")
+image1 = img.imread("C:\\Users\\KOMPUTER 20\\Downloads\\jezo\\PCD\\PCD11\\gracia.jpeg",mode='F')
+image2 = img.imread("C:\\Users\\KOMPUTER 20\\Downloads\\jezo\\PCD\\PCD11\\gracia.jpeg")
 
 thres = localThres(image1,15,10)
 mask = (thres==255).astype(np.uint8)
